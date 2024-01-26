@@ -22,6 +22,10 @@ Solução do usuário Allan Bruno do kaggle no Notebook: https://www.kaggle.com/
 - Os preços são dados em reais (R$)
 - Temos bases de abril de 2018 a maio de 2020, com exceção de junho de 2018 que não possui base de dados
 
+## Meu aprendizado com o projeto
+
+Aqui colocarei algumas coisas que aprendi durante o projeto.
+
 ### Upload Arquivos 100mb +
 
 Para fazer este tipo de upload precisei utilizar da ferramenta de LFS do git. Para mais informações entre no site [Git LFS](https://github.com/git-lfs/git-lfs?tab=readme-ov-file).
@@ -39,3 +43,6 @@ git lfs track "*.csv"
 ```
 
 Agora toda vez que um arquivo .csv for comitado ele ira sem problemas. Basta seguir com o git add e commit.
+
+### GitHub
+Eu já utilizava diariamente o GitHub, porém, não sabia que existia um limite de 1GB para o projeto no plano gratuito. Testei fazer o upload no GitLab e deu certo. Como desejo postar no GitHub este projeto utilizei um gitignore para que os arquivos .csv não fossem para o repositório.
