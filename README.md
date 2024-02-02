@@ -1,7 +1,13 @@
 # HS_Airbnb_Rio
 
-## Resumo 
+## Sumário:
+- [Resumo](#resumo)
+- [Descrição](#descrição)
+- [Conclusão](#conclusão)
+- [Próximos passos](#próximos-passos)
+- [Aprendizado](#meu-aprendizado-com-o-projeto)
 
+## Resumo 
 Este projeto foi desenvolvido com base nas aulas oferecidas pela HashTag Treinamentos. Realizei alterações e o publiquei no GitHub para praticar e testar meus conhecimentos relacionados à ciência de dados. Além disso utilizei a AWS para efetuar o Deploy do projeto e testa-lo.
 
 ## Descrição
@@ -24,8 +30,39 @@ Solução do usuário Allan Bruno do kaggle no Notebook: https://www.kaggle.com/
 
 ## Conclusão
 
+### Coleta de Dados:
+ O código inicia definindo um diretório de base (base_path) e realiza um loop sobre os arquivos dentro desse diretório. Com o objetivo de coletar dados de arquivos CSV relacionados ao Airbnb no Rio de Janeiro, organizando esses dados em um único DataFrame chamado airbnb_base. Os dados coletados incluem informações sobre acomodações, preços, avaliações e outros atributos.
+
+### Limpeza de Dados: 
+O projeto inclui etapas de limpeza de dados. Por exemplo, há um código para tratar valores nulos, onde colunas com mais de 300.000 valores nulos são removidas do DataFrame. Além disso, colunas como "price" e "extra_people" têm seus valores formatados para tipos numéricos.
+
+### Engenharia de Recursos: 
+O código realiza alguma engenharia de recursos, como a criação de colunas de variáveis ​​dummy para variáveis categóricas, como "property_type", "room_type", "bed_type" e "cancellation_policy".
+
+### Modelagem e Avaliação: 
+A parte final do código parece se concentrar na modelagem e avaliação. Duas técnicas de modelagem são mencionadas: regressão linear (model_lr) e regressão aleatória de floresta (model_rf). O desempenho desses modelos é avaliado usando métricas como R2, MSE (Erro Quadrático Médio) e RMSE (Raiz do Erro Quadrático Médio). Além disso, o código também avalia a importância das características no modelo.
+
+Em geral, o projeto parece envolver a coleta e análise de dados relacionados a aluguéis do Airbnb no Rio de Janeiro, com o objetivo de criar modelos para prever preços.
+
+### Remoção de colunas
+Foi removida na parte de EDA algumas colunas que julguei não necessárias para a análise. Depois disso, com base no algoritmo de Random Forest, retirei as features que têm importância menor que 1%.
 ![](/img/importancia.png)
+Podemos observar uma melhora no modelo após a retirada desta coluna. Além da melhora do modelo, temos uma melhora no tempo de execução na minha máquina, que foi de 3 minutos e 47 segundos para 2 minutos e 45 segundos.
 ![](/img/comparacao.png)
+
+### Projeto em funcionamento
+Aqui, podemos notar que a forma apresentada pelo Streamlit é muito amigável, proporcionando uma ótima experiência ao usuário. Utilizei valores aleatórios para esta previsão.
+![](/img/serv1.png)
+![](/img/serv2.png)
+
+## Próximos passos:
+Nos próximos passos do projeto, tenho a intenção de realizar as seguintes ações:
+
+Deploy Completo na AWS: Planejo implementar um deploy completo do projeto na AWS (Amazon Web Services), tornando-o acessível a todos. Isso permitirá que outras pessoas acessem e utilizem as funcionalidades do modelo de forma conveniente.
+
+Otimização do Modelo com Hiperparâmetros: Pretendo melhorar ainda mais o desempenho do modelo de regressão. Para isso, vou realizar uma busca de hiperparâmetros detalhada, explorando diferentes configurações para aumentar o valor do coeficiente de determinação (R2) e diminuir o erro quadrático médio (RMSE). Essa otimização visa tornar as previsões do modelo ainda mais precisas e úteis.
+
+
 
 ## Meu aprendizado com o projeto
 
