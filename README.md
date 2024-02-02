@@ -2,15 +2,13 @@
 
 ## Resumo 
 
-Este é um projeto feito com base nas aulas dadas na HashTag Treinamentos, efetuei mudanças e subi para o GitHub para treinar e testar meus conhecimentos a cerca de conteúdos voltados a ciências de dados.
+Este projeto foi desenvolvido com base nas aulas oferecidas pela HashTag Treinamentos. Realizei alterações e o publiquei no GitHub para praticar e testar meus conhecimentos relacionados à ciência de dados. Além disso utilizei a AWS para efetuar o Deploy do projeto e testa-lo.
 
 ## Descrição
 
 ### Objetivo
 
-Construir um modelo de previsão de preço que permita uma pessoa comum que possui um imóvel possa saber quanto deve cobrar pela diária do seu imóvel.
-
-Ou ainda, para o locador comum, dado o imóvel que ele está buscando, ajudar a saber se aquele imóvel está com preço atrativo (abaixo da média para imóveis com as mesmas características) ou não.
+Desenvolver um modelo de previsão de preços que permita a uma pessoa comum, proprietária de um imóvel, saber quanto deve cobrar pela diária do seu imóvel. Além disso, para o locatário comum, tendo em vista o imóvel que deseja alugar, este modelo ajudará a determinar se o preço do imóvel está atrativo (abaixo da média para imóveis com características semelhantes) ou não.
 
 ### O que temos disponível, inspirações e créditos
 
@@ -24,9 +22,35 @@ Solução do usuário Allan Bruno do kaggle no Notebook: https://www.kaggle.com/
 - Os preços são dados em reais (R$)
 - Temos bases de abril de 2018 a maio de 2020, com exceção de junho de 2018 que não possui base de dados
 
+## Conclusão
+
+![](/img/importancia.png)
+![](/img/comparacao.png)
+
 ## Meu aprendizado com o projeto
 
 Aqui colocarei algumas coisas que aprendi durante o projeto.
+
+Ao trabalhar com projetos de Machine Learning (ML) e análise de dados, aprofundei meus conhecimentos no uso da biblioteca Pandas, uma ferramenta essencial para manipulação e análise de dados em Python. Em particular, explorei funcionalidades avançadas como get_dummies, técnicas de exclusão de outliers e aprimorei a visualização de dados com Matplotlib e Seaborn.
+
+
+### AWS
+
+Durante o processo de implementação de um projeto na Amazon Web Services (AWS), concentrei-me em aprofundar meu conhecimento sobre o serviço EC2 (Elastic Compute Cloud) e os grupos de segurança associados. Essa fase inicial envolveu a revisão de conceitos-chave relacionados à criação e configuração de instâncias EC2, bem como a importância dos grupos de segurança na definição de regras de acesso para proteger os recursos na nuvem.
+
+Um aspecto prático significativo do meu trabalho foi aprender a utilizar comandos scp para transferir arquivos da minha máquina local para a instância EC2. Essa tarefa foi realizada por meio de uma conexão segura SSH, facilitando a movimentação segura de arquivos necessários para o deploy, como scripts Python e modelos de Machine Learning salvos, diretamente para o ambiente de execução na nuvem.
+
+Para o deploy do projeto, foquei na configuração do servidor para aceitar conexões na porta TCP 8501, que é padrão para aplicações Streamlit. Adotei uma abordagem centrada na segurança, modificando as regras do grupo de segurança para permitir conexões à porta 8501 apenas do meu IP. Essa medida restritiva visou minimizar potenciais vulnerabilidades, limitando o acesso ao aplicativo apenas a usuários autorizados, neste caso, eu mesmo.
+
+Após configurar o ambiente na AWS e ajustar as definições de segurança, procedi com o teste direto na instância EC2. Executei o aplicativo Streamlit sem problemas, indicando que todas as dependências estavam corretamente instaladas e que o ambiente estava adequadamente configurado. Esse sucesso validou não apenas a funcionalidade do aplicativo na nuvem, mas também a eficácia das medidas de segurança implementadas.
+
+Esse processo foi uma oportunidade valiosa para reforçar minhas habilidades técnicas relacionadas à AWS, segurança de aplicações na nuvem, e deploy de projetos de software em um ambiente de produção. A capacidade de resolver desafios técnicos, como a questão do consumo de recursos e a otimização do desempenho do aplicativo, contribuiu ainda mais para o meu desenvolvimento profissional na área de desenvolvimento de software e administração de sistemas na nuvem.
+
+### Utilizando o Streamlit: 
+Aprendi a utilizar o Streamlit, uma biblioteca excepcional para a rápida criação de aplicativos web para projetos de dados e ML. Com o Streamlit, consegui desenvolver interfaces de usuário intuitivas e interativas que permitem aos usuários interagir com os modelos de ML em tempo real. A facilidade de uso do Streamlit, combinada com sua capacidade de transformar scripts Python em aplicativos compartilháveis, revelou-se uma ferramenta indispensável para a demonstração e teste de modelos de ML de forma prática e acessível.
+
+### Perpetuação de Modelos com Joblib: 
+No que diz respeito à perpetuação de modelos de ML, familiarizei-me com o joblib, uma biblioteca de serialização Python que se destaca pela sua eficiência em armazenar e recuperar objetos Python complexos, como os modelos de ML treinados. Aprendi a usar o joblib para salvar modelos de ML treinados no disco, permitindo a reutilização desses modelos sem a necessidade de re-treinamento. Isso não apenas otimizou o processo de deploy de modelos na AWS, mas também facilitou a manutenção e atualização dos modelos de ML, garantindo que as aplicações permaneçam atualizadas e eficientes.
 
 ### Upload Arquivos 100mb +
 
